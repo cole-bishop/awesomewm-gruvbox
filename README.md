@@ -18,3 +18,5 @@ For these features, the following need to be available on your `$PATH`:
 mkdir -p $HOME/.config
 git clone https://github.com/cole-bishop/awesomewm-gruvbox.git $HOME/.config
 ```
+
+![awesomewm-gruvbox](https://i.ibb.co/fCbjtw5/awesomewm-gruvbox.png)

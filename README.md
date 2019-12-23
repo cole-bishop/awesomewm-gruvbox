@@ -1,9 +1,8 @@
 # awesomewm-gruvbox
 A gruvbox'd setup with minimal tweaks of the powerarrow-dark theme in [awesome-copycats](https://github.com/lcpz/awesome-copycats).
-
-## Requirements
-See the controls with `Super+s`. 
-For these features, the following need to be available on your `$PATH`:
+## Opt In Features
+See the applicable controls with `Super+s`. 
+For these features, the following need to be available on `$PATH`:
 
 `rofi` (macOS spotlight/context switcher)
 
@@ -13,9 +12,9 @@ For these features, the following need to be available on your `$PATH`:
 
 `playerctl` (media controls, Spotify compatible)
 
-## Usage
+`sloc` (simple X screenlocker)
+## Setup
 ```
-mkdir -p $HOME/.config
 git clone https://github.com/cole-bishop/awesomewm-gruvbox.git $HOME/.config/awesome
 ```
 

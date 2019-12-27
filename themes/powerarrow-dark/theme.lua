@@ -14,6 +14,7 @@ local device_wifi       = "wlp2s0"
 
 local gears = require("gears")
 local lain  = require("lain")
+local lain_helpers = require("lain.helpers")
 local awful = require("awful")
 local wibox = require("wibox")
 local lgi   = require("lgi")
@@ -23,6 +24,7 @@ local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
+theme.machine_name                              = lain_helpers.first_line("/sys/class/dmi/id/product_name")
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
 
@@ -208,7 +210,13 @@ local cpu = lain.widget.cpu({
 
 -- Coretemp
 local tempicon = wibox.widget.imagebox(theme.widget_temp)
+if theme.machine_name == 'XPS 13 9380' then
+    theme.tempfile = '/sys/devices/virtual/thermal/thermal_zone10/temp'
+else
+    theme.tempfile = '/sys/devices/virtual/thermal/thermal_zone0/temp'
+end     
 local temp = lain.widget.temp({
+    tempfile = theme.tempfile,
     settings = function()
         widget:set_markup(markup.font(theme.font, " " .. coretemp_now .. "°C "))
     end

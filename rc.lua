@@ -435,10 +435,10 @@ globalkeys = my_table.join(
     --]]
 
     -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
-              {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
-              {description = "-10%", group = "hotkeys"}),
+    awful.key({ modkey, "Ctrl" }, "u", function () os.execute(". $HOME/.config/awesome/scripts/bash/brightness +") end,
+              {description = "Brightness +10%", group = "hotkeys"}),
+    awful.key({ modkey, "Ctrl" }, "d", function () os.execute(". $HOME/.config/awesome/scripts/bash/brightness -") end,
+              {description = "Brightness -10%", group = "hotkeys"}),
 
     -- PulseAudio volume control
     awful.key({ modkey, altkey }, "Up",

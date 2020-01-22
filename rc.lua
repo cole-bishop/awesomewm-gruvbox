@@ -53,6 +53,11 @@ end
 
 -- {{{ Autostart windowless processes
 
+-- See $HOME/.config/awesome/scripts/bash/autorun.
+-- Programs in it are guaranteed
+-- to only have a single instance running.
+awful.spawn.with_shell(". $HOME/.config/awesome/scripts/bash/autorun")
+
 -- This function will run once every time Awesome is started
 local function run_once(cmd_arr)
     for _, cmd in ipairs(cmd_arr) do

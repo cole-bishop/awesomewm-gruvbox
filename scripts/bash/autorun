@@ -11,4 +11,4 @@ function run {
 # Add desired autorun startup programs with arguments.
 
 # Use slock as X lock screen for XScreenSaver if xss-lock and slock are on $PATH.
-which xss-lock && which slock && xss-lock -- slock -n 
+which xss-lock && which slock && run xss-lock -- slock -n 

@@ -37,7 +37,7 @@ theme.font                                  = theme_font_type .. " " .. theme_fo
 theme.hotkeys_font                          = hotkeys_font_type .. " " .. hotkeys_font_size
 theme.hotkeys_description_font              = theme.font
 
-theme.fg_normal                                 = "#DDDDFF"
+theme.fg_normal                                 = "#ebdbb2"
 theme.fg_focus                                  = "#FB4934"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#1d2021"
